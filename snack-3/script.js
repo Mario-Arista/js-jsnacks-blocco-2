@@ -1,16 +1,9 @@
-/*
-Snack 3
-Crea due array che hanno un numero di elementi diversi.
-Aggiungi elementi all’array che ha meno elementi
-fino a quando ne avrà tanti quanti l’altro.
-(Se iniziate con un array da 3 elementi e l'altro da 5,
-eseguite istruzioni sinchè non ne hanno entrambi 5)
-*/
-
 // Mi creo 2 array 
 const arrayOne = [3, 10, 45];
 
 const arrayTwo = [12, 24, 25, 32, 55];
+
+const outputElement = document.getElementById("results");
 
 
 do {
@@ -21,9 +14,21 @@ do {
     }
 
     arrayOne.push(numeroInserito);
+
     console.log(numeroInserito);
     console.log(arrayOne);
     console.log(arrayTwo);
 
+    const newElement = document.createElement("li");
+    outputElement.append(newElement);
+    newElement.innerHTML = numeroInserito;
+    newElement.classList.add("list-unstyled");
 
+    const messageElement = document.querySelector("h2");
+    messageElement.classList.remove("d-none");
+
+    const lastElement = document.querySelector("h3");
+    lastElement.classList.remove("d-none");
+    
 } while(arrayOne.length != arrayTwo.length);
+

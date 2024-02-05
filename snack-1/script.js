@@ -1,6 +1,8 @@
 // Creo array vuoto
 let arrayWithNumbers = [];
 
+let endElement = document.getElementById("results");
+
 // Inizializzo somma per numero dentro array a 0
 let sum = 0;
 
@@ -15,16 +17,20 @@ while (sum < 50) {
     }
 
     arrayWithNumbers.push(number);
+    
+    console.log("Tentativi fatti")
+    console.log(sum);
+    console.log("Cosa c'è dentro l'array?", arrayWithNumbers);
+    
 
     sum += number;
-
+    
 }  
 
-console.log("Tentativi fatti")
-console.log(sum);
-console.log(arrayWithNumbers);
+endElement.innerHTML = "Hai raggiunto il limite di 50!";
 
-const end = document.getElementById("results").innertext = `Hai raggiunto il limite di 50. I numeri che hai inserito sono ${number}. La somma di questi numeri è ${sum}`;
+
+
 
 
 

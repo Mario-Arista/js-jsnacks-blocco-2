@@ -21,7 +21,7 @@ while (!indovinato) {
 
     if (lotteria === 0) {
         indovinato = true;
-        
+
     } else if (lotteria > randomNumber)  {
 
         alert("hai scelto un numero più alto");
@@ -37,4 +37,6 @@ while (!indovinato) {
         console.log("Hai indovinato!")
     }
 }
+
+let end = document.getElementById("results").innerHTML = `Il numero era ${randomNumber}... Se lo hai indovinato bravissimo! Se sei uscito premendo 0, che delusione!`;
 

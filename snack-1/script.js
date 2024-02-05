@@ -15,7 +15,8 @@ let sum = 0;
 let number;
 
 while (sum < 50) {
-    let number = parseInt(prompt("Inserisci un numero"));
+
+    let number = Number(prompt("Inserisci un numero"));
 
     if(isNaN(number)) {
         alert("Il numero inserito non è valido");
@@ -24,7 +25,7 @@ while (sum < 50) {
     arrayWithNumbers.push(number);
 
     sum += number;
-    
+
     console.log("Tentativi fatti")
     console.log(sum);
     console.log(arrayWithNumbers);

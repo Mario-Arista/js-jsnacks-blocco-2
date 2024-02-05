@@ -15,7 +15,6 @@ console.log(randomNumber);
 
 // Inizializzo variabile per chiedere utente numero
 let indovinato = false;
-let tentativi = 0;
 
 while (!indovinato) {
     let lotteria = Number(prompt("Indovina il numero da 1 a 100:"));

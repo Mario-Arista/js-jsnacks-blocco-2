@@ -1,11 +1,3 @@
-/*
-Snack 1
-Crea un array vuoto e chiedi all’utente un numero da 
-inserire nell’array. Continua a chiedere i numeri 
-all’utente e a inserirli nell’array fino a quando la 
-somma degli elementi è minore di 50
-*/
-
 // Creo array vuoto
 let arrayWithNumbers = [];
 
@@ -26,11 +18,18 @@ while (sum < 50) {
 
     sum += number;
 
-    console.log("Tentativi fatti")
-    console.log(sum);
-    console.log(arrayWithNumbers);
+}  
 
-}   
+console.log("Tentativi fatti")
+console.log(sum);
+console.log(arrayWithNumbers);
+
+const end = document.getElementById("results").innertext = `Hai raggiunto il limite di 50. I numeri che hai inserito sono ${number}. La somma di questi numeri è ${sum}`;
+
+
+
+
+
 
 
 

@@ -1,6 +1,5 @@
 alert("Inserisci un numero. Se è pari ti restituisco il numero, sennò quello successivo");
 
-
 let continua = true;
 
 while (continua) {

@@ -17,9 +17,12 @@ console.log(randomNumber);
 let indovinato = false;
 
 while (!indovinato) {
-    let lotteria = Number(prompt("Indovina il numero da 1 a 100:"));
+    let lotteria = Number(prompt("Indovina il numero da 1 a 100 (metti 0 per uscire)"));
 
-    if (lotteria > randomNumber)  {
+    if (lotteria === 0) {
+        indovinato = true;
+        
+    } else if (lotteria > randomNumber)  {
 
         alert("hai scelto un numero più alto");
         console.log("Numero troppo alto. Prova ancora!")

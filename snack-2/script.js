@@ -8,27 +8,31 @@ perfettamente uguale al numero estratto in modo casuale.
 Quando l'utente trova il numero, fateglielo sapere!
 */
 
+// Prima genero un numero casuale 
 const randomNumber = Math.floor(Math.random() * 100 + 1);
 console.log(randomNumber);
 
-let indovina;
 
+// Inizializzo variabile per chiedere utente numero
+let indovinato = false;
+let tentativi = 0;
 
-do {
+while (!indovinato) {
+    let lotteria = Number(prompt("Indovina il numero da 1 a 100:"));
 
-    indovina = Number(prompt("Indovina il numero (da 1 a 100)"));
-    
-    if (indovina <= 0 || indovina > 100 ) {
-        alert("Hai inserito un numero non valido! Deve essere tra 1 e 100...")
-    }
+    if (lotteria > randomNumber)  {
 
-    if (indovina > randomNumber) {
         alert("hai scelto un numero più alto");
-    } else {
+        console.log("Numero troppo alto. Prova ancora!")
+        
+    } else if (lotteria < randomNumber) {
+
         alert("hai scelto un numero più basso");
+        console.log("Numero troppo basso. Prova ancora!")
+    } else {
+
+        indovinato = true;
+        console.log("Hai indovinato!")
     }
+}
 
-
-} while (indovina === randomNumber);
-
-const outputElement = document.getElementById("results");

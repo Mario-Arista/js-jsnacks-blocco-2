@@ -15,10 +15,6 @@ do {
 
     arrayOne.push(numeroInserito);
 
-    console.log(numeroInserito);
-    console.log(arrayOne);
-    console.log(arrayTwo);
-
     const newElement = document.createElement("li");
     outputElement.append(newElement);
     newElement.innerHTML = numeroInserito;

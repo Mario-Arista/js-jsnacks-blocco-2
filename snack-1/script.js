@@ -1,7 +1,11 @@
 // Creo array vuoto
 let arrayWithNumbers = [];
 
-let endElement = document.getElementById("results");
+let messOneElement = document.getElementById("message-one");
+let messTwoElement = document.getElementById("message-two");
+
+let outputElement = document.getElementById("results");
+
 
 // Inizializzo somma per numero dentro array a 0
 let sum = 0;
@@ -16,19 +20,18 @@ while (sum < 50) {
         alert("Il numero inserito non è valido");
     }
 
-    arrayWithNumbers.push(number);
-    
-    console.log("Tentativi fatti")
-    console.log(sum);
-    console.log("Cosa c'è dentro l'array?", arrayWithNumbers);
-    
-
     sum += number;
+
+    if (sum < 50) {
+        arrayWithNumbers.push(number);
+        outputElement.innerHTML += number + '<br>';
+    }
+    
     
 }  
 
-endElement.innerHTML = "Hai raggiunto il limite di 50!";
-
+messOneElement.innerHTML = "Hai inserito questi numeri:";
+messTwoElement.innerHTML = "Il database ha raggiunto il suo limite ed è completo!";
 
 
 
